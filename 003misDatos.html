@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Datos Personales</title>
+</head>
+<body>
+    <h1>Introduce tus Datos Personales</h1>
+    <form action="003misDatos.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br>
+
+        <label for="primerApellido">Primer Apellido:</label>
+        <input type="text" name="primerApellido" id="primerApellido" required><br>
+
+        <label for="segundoApellido">Segundo Apellido:</label>
+        <input type="text" name="segundoApellido" id="segundoApellido" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="anioNacimiento">Año de Nacimiento:</label>
+        <input type="number" name="anioNacimiento" id="anioNacimiento" required><br>
+
+        <label for="movil">Móvil:</label>
+        <input type="tel" name="movil" id="movil" required><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
