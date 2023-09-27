@@ -6,13 +6,25 @@
     <title>Dinero</title>
 </head>
 <body>
-    <form action="005dinero.php">
-        <label for="dinero">Cantidad dinero:</label>
-        <input type="text" name="dinero" id="dinero" required><br>
+    <?php 
+    $billetes = array(500, 200, 100, 50, 20, 10, 5);
+    $cantidad = 138;
 
-        <input type="submit" value="Enviar">
-    </form>
-
-    
+    foreach($billetes as $divisores){
+        $contar = intdiv($cantidad, $divisores);
+        if($contar >0){
+            echo $contar;
+            echo ($divisores >= 5) ? "billetes de $divisores" : "billetes de $divisores";
+            echo "<br>";
+            $cantidad %= $divisores;
+        }
+        else{
+            echo $contar;
+            echo ($divisores >= 5) ? "billetes de $divisores" : "billetes de $divisores";
+            echo "<br>";
+            $cantidad %= $divisores;
+        }
+    }
+    ?>
 </body>
 </html>
