@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <th>Año de Nacimiento</th>
-            <td><?php echo $anioNacimiento; ?></td>
+            <td><?php echo $anoNacimiento; ?></td>
         </tr>
         <tr>
             <th>Móvil</th>

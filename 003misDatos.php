@@ -6,12 +6,12 @@
 <body>
     <?php
         // Recoger los datos del formulario
-        $nombre = $_POST["nombre"];
-        $primerApellido = $_POST["primerApellido"];
-        $segundoApellido = $_POST["segundoApellido"];
-        $email = $_POST["email"];
-        $anioNacimiento = $_POST["anioNacimiento"];
-        $movil = $_POST["movil"];
+        $nombre = $_GET["nombre"];
+        $primerApellido = $_GET["primerApellido"];
+        $segundoApellido = $_GET["segundoApellido"];
+        $email = $_GET["email"];
+        $anioNacimiento = $_GET["anioNacimiento"];
+        $movil = $_GET["movil"];
     ?>
 
     <h1>Datos Personales</h1>
