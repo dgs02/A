@@ -10,8 +10,10 @@
 <body>
 
     <?php 
+    // Definimos la variable edad que recogemos por url
     $edad = $_GET['edad'];
 
+    // Dependiendo la cantidad que recoja la varibale mostraremos un  mensaje u otro
     if($edad<3){
         echo "bebe";
     }

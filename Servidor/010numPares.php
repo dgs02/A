@@ -6,7 +6,7 @@
 <body>
     <h1>Números Pares en un Rango</h1>
 
-    <form method="post">
+    <form method="GET">
         <label for="inicio">Inicio:</label>
         <input type="text" id="inicio" name="inicio">
         <br>
@@ -17,9 +17,9 @@
     </form>
 
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $inicio = intval($_POST["inicio"]);
-        $fin = intval($_POST["fin"]);
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $inicio = ($_GET["inicio"]);
+        $fin = ($_GET["fin"]);
 
         echo "<h2>Números Pares entre $inicio y $fin:</h2>";
         echo "<ul>";
