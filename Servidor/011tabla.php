@@ -6,15 +6,15 @@
 <body>
     <h1>Tabla de Multiplicar</h1>
 
-    <form method="post">
+    <form method="GET">
         <label for="numero">Número:</label>
         <input type="text" id="numero" name="numero">
         <input type="submit" value="Generar Tabla">
     </form>
 
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $numero = intval($_POST["numero"]);
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $numero = intval($_GET["numero"]);
 
         echo "<h2>Tabla de Multiplicar del $numero:</h2>";
         echo "<table>";
