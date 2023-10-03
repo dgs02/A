@@ -26,6 +26,7 @@
         echo "</thead>";
         echo "<tbody>";
 
+        // recorremos un for desde el 1 al 10 y vamos multiplicando y mostrando los resultados
         for ($i = 1; $i <= 10; $i++) {
             $resultado = $numero * $i;
             echo "<tr>";

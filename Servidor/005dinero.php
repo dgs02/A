@@ -7,9 +7,11 @@
 </head>
 <body>
     <?php 
+    //Declaramos un array de los billetes y una variable de cantidad
     $billetes = array(500, 200, 100, 50, 20, 10, 5);
     $cantidad = 138;
 
+    // recorremos y separamos
     foreach($billetes as $divisores){
         $contar = intdiv($cantidad, $divisores);
         if($contar >0){

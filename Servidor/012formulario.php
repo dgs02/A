@@ -24,10 +24,10 @@
             }
             echo '</table>';
         } else {
-            echo 'Por favor, ingrese un número válido de filas y columnas.';
+            echo 'Por favor, ingrese un número válido.';
         }
     } else {
-        echo 'Por favor, complete el formulario.';
+        echo 'Complete el formulario.';
     }
     ?>
 

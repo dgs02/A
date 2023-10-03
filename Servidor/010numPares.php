@@ -18,13 +18,16 @@
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        // Recogemos los numeors de incio y fin
         $inicio = ($_GET["inicio"]);
         $fin = ($_GET["fin"]);
 
         echo "<h2>Números Pares entre $inicio y $fin:</h2>";
         echo "<ul>";
 
+        // Recorremos los numeros para ur mostrado sus pares
         for ($i = $inicio; $i <= $fin; $i++) {
+            // introducimos la condicion para no mostrar numeros equivocados
             if ($i % 2 == 0) {
                 echo "<li>$i</li>";
             }
