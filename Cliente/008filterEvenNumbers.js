@@ -1,6 +1,7 @@
 "use strict";
 // Declaramo la funcion flecha
 let filtrarNumeros = (arr) => {
+  // hacemos uso del metodo filter para filtrar por numeros que divididos entre dos el resto sea 0
     evenNumbers = arr.filter((number) => number % 2 === 0);
     return evenNumbers;
   };
