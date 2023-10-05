@@ -1,4 +1,5 @@
-
+"use strict";
+// Declaramo la funcion flecha
 let filtrarNumeros = (arr) => {
     evenNumbers = arr.filter((number) => number % 2 === 0);
     return evenNumbers;
