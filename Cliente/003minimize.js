@@ -1,3 +1,4 @@
+"use strict";
 function minimize(a, b){
     if(a > b ){
         return b

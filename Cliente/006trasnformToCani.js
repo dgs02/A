@@ -1,3 +1,4 @@
+"use strict";
 function transformarTexto() {
     const inputTexto = document.getElementById("inputTexto");
     const resultado = document.getElementById("resultado");

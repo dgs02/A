@@ -1,3 +1,4 @@
+"use strict";
 // Reescribimos la funcion con el operador de signo ?
 function checkAge(age) {
     return age > 18 ? true : confirm('¿Tienes permiso de tus padres?');
