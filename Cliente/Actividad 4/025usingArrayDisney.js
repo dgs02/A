@@ -8,29 +8,46 @@ let disney = [
     { nombre: "Wendy", pelicula: "Peter Pan" }
   ];
   
-  // Filtrar personajes de la película "Hércules"
-  let herculesCharacters = disney.filter((personaje) => personaje.pelicula === "Hércules");
-  console.log("Personajes de la película Hércules:");
-  console.log(herculesCharacters);
+  // Meter a "Peter Pan" al final del array disney.
+  disney.push({ nombre: "Peter Pan", pelicula: "Peter Pan" });
   
-  // Encontrar todos los nombres de personajes
-  let nombresDePersonajes = disney.map((personaje) => personaje.nombre);
-  console.log("Nombres de todos los personajes:");
-  console.log(nombresDePersonajes);
+  // Pintar el array
+  console.log("Array después de agregar a Peter Pan al final:");
+  console.log(disney);
   
-  // Encontrar todos los nombres de películas
-  let nombresDePeliculas = disney.map((personaje) => personaje.pelicula);
-  console.log("Nombres de todas las películas:");
-  console.log(nombresDePeliculas);
+  // Meter a "El capitán Garfio" al principio del array, no olvides la película.
+  disney.unshift({ nombre: "El capitán Garfio", pelicula: "Peter Pan" });
   
-  // Reducir la lista a un objeto con personajes por película
-  let personajesPorPelicula = disney.reduce((acumulador, personaje) => {
-    if (!acumulador[personaje.pelicula]) {
-      acumulador[personaje.pelicula] = [];
+  // Meter al cocodrilo detrás del capitán, no olvides la película.
+  disney.splice(2, 0, { nombre: "Cocodrilo", pelicula: "Peter Pan" });
+  
+  // Obtener los personajes de la película "Peter Pan" y mostrarlos uno a uno.
+  console.log("Personajes de la película 'Peter Pan':");
+  disney.forEach((personaje) => {
+    if (personaje.pelicula === "Peter Pan") {
+      console.log(personaje.nombre);
     }
-    acumulador[personaje.pelicula].push(personaje.nombre);
-    return acumulador;
-  }, {});
-  console.log("Personajes por película:");
-  console.log(personajesPorPelicula);
+  });
+  
+  // Encontrar el índice de "Campanilla".
+  const campanillaIndex = disney.findIndex((personaje) => personaje.nombre === "Campanilla");
+  console.log("Índice de Campanilla:", campanillaIndex);
+  
+  // Buscar al cocodrilo.
+  const cocodrilo = disney.find((personaje) => personaje.nombre === "Cocodrilo");
+  console.log("Información del Cocodrilo:", cocodrilo);
+  
+  // Escribe la función shuffle(array) que baraje (reordene de forma aleatoria) los elementos del array.
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  
+  // Prueba la función shuffle con una copia del array disney
+  const shuffledDisney = [...disney];
+  shuffle(shuffledDisney);
+  console.log("Array Disney barajeado:");
+  console.log(shuffledDisney);
   
