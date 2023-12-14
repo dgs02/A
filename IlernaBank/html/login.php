@@ -6,43 +6,48 @@ if(mysqli_connect_error()){
     exit();
 }
 
-// Verifica si se han enviado datos por GET
+// Inicializar la variable $mensaje
+$mensaje = "";
+
+// Verificar si se han enviado datos por GET
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["username"]) && isset($_GET["password"])) {
-    // Obtiene los datos del formulario
+    // Obtener los datos del formulario
     $username = $_GET["username"];
     $password = $_GET["password"];
 
     $consultaNombre = "SELECT Nombre FROM usuarios WHERE Nombre = '$username'";
     $resultado = mysqli_query($conexion, $consultaNombre);
 
-    // Verifica si las credenciales son válidas
+    // Verificar si las credenciales son válidas
     if ($fila = mysqli_fetch_assoc($resultado)) {
-        // Inicio de sesión exitoso
-        echo "¡Inicio de sesión exitoso!";
+        // Inicio de sesión exitoso, redirigir a inicio.php
+        header("Location: bienvenida.php?username=" . urlencode($username));
+        exit();
     } else {
-        // Inicio de sesión fallido
-        echo "Usuario o contraseña incorrectos.";
+        // Inicio de sesión fallido, mostrar mensaje de error
+        $mensaje = "Usuario o contraseña incorrectos.";
     }
 }
 
 // Cerrar la conexión
 mysqli_close($conexion);
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
         <h2>Iniciar Sesión</h2>
-        <form id="loginForm" action="Login.php" method="get">
+        <!-- Mostrar el mensaje de error si existe -->
+        <?php if (!empty($mensaje)) : ?>
+            <p class="mensaje-error"><?php echo $mensaje; ?></p>
+        <?php endif; ?>
+        <form id="loginForm" action="login.php" method="get">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" required>
 
