@@ -25,7 +25,7 @@ if(isset($_GET["username"])){
 <body>
     <header>
         <!-- Banner del banco -->
-        <img src="banner_del_banco.png" alt="Banner del Banco XYZ">
+        <img src="../img/IlerBank.png" alt="Banner del Banco XYZ">
     </header>
     <main>
         <?php
