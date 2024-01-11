@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\pokemonsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('pokemons', [ pokemonsController::class, 'pokemons' ]);
+Route::post('pokemons', [ pokemonsController::class, 'crear' ]) -> name('pokemons.crear');
