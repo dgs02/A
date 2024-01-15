@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        #mainImage {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .thumbnail {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="mainImage" src="image1.jpg" alt="Imagen Principal">
+
+    <div id="thumbnails">
+        <img class="thumbnail" src="thumb1.jpg" alt="Miniatura 1">
+        <img class="thumbnail" src="thumb2.jpg" alt="Miniatura 2">
+        <img class="thumbnail" src="thumb3.jpg" alt="Miniatura 3">
+    </div>
+
+    <script src="015imageGallery.js"></script>
+</body>
+</html>
