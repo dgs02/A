@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj con Colores</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #clock {
+            font-family: 'Arial', sans-serif;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #hours {
+            color: red;
+        }
+
+        #minutes {
+            color: green;
+        }
+
+        #seconds {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="clock">
+        <span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span>
+    </div>
+
+    <button onclick="startClock()">Start</button>
+    <button onclick="stopClock()">Stop</button>
+
+    <script src="002paintClock.js"></script>
+</body>
+</html>
