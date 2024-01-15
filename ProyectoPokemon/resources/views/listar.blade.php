@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-<a href="crear">crear</a>
 
     <h1>Notas desde base de datos</h1>
+
+    <a href={{  route('pokemons.crear') }}>Crear</a>
+
     <table border="1">
      <thead>
      <tr>
