@@ -7,12 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{ route('pokemons.crear') }}" method="POST">
-        @csrf {{-- Cláusula para obtener un token de formulario al enviarlo --}}
-        <input type="text" name="nombre" placeholder="Nombre de la nota" class="form-control mb-2" autofocus>
-        <input type="text" name="descripcion" placeholder="Descripción de la nota" class="form-control mb-2">
-        <button class="btn btn-primary btn-block" type="submit">
-        Crear nueva nota
-        </button></form>
+    <form action="{{ route('guardar.pokemon') }}" method="POST">
+        @csrf
+
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" required>
+
+        <label for="type">Tipo:</label>
+        <input type="text" name="type">
+
+        <label for="subtype">subtipo:</label>
+        <input type="text" name="subtype" >
+
+        <label for="region">Region</label>
+        <input type="text" name="region" >
+
+        <button type="submit">Guardar Pokémon</button>
+    </form>
 </body>
 </html>

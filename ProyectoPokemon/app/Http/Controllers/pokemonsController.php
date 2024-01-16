@@ -14,21 +14,21 @@ class pokemonsController extends Controller
     }
 
 
-    public function crear(Request $request)
-    {
+        // Otros métodos del controlador...
 
-        $request -> validate([
-            'name' => 'required',
-            'type' => 'required'
-            ]);
-        $pokemonNuevo = new pokemons;
-        $pokemonNuevo->id = $request->id;
-        $pokemonNuevo->subtype = $request->subtype;
-        $pokemonNuevo->region = $request->region;
-        $pokemonNuevo->save();
+        public function mostrarCrear()
+        {
+            return view('crear');
+        }
 
+        public function guardarPokemon(Request $request) {
+            $pokemonsNuevo = new pokemons;
+            $pokemonsNuevo -> name = $request -> name;
+            $pokemonsNuevo -> type = $request -> type;
+            $pokemonsNuevo -> subtype = $request -> subtype;
+            $pokemonsNuevo -> region = $request -> region;
+            $pokemonsNuevo -> save();
+            return back() -> with('mensaje', 'Nota agregada exitosamente');
+           }
 
-
-        return back()->with('mensaje', 'Nota agregada exitosamente');
-    }
 }

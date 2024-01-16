@@ -9,3 +9,9 @@ class pokemons extends Model
 {
     use HasFactory;
 }
+
+
+class Pokemon extends Model
+{
+    protected $fillable = ['name', 'type', 'subtype', 'region'];
+}

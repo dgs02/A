@@ -19,5 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('pokemons', [ pokemonsController::class, 'pokemons' ]);
-Route::post('pokemons', [ pokemonsController::class, 'crear' ]) -> name('pokemons.crear');
+
+Route::get('listar', [ pokemonsController::class, 'pokemons' ])->name('listar');
+Route::get('crear', [pokemonsController::class, 'mostrarCrear'])->name('crear');
+Route::post('guardar-pokemon', [pokemonsController::class, 'guardarPokemon'])->name('guardar.pokemon');
+

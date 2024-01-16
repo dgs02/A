@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -46,12 +47,4 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function name(): Attribute
-    {
-        return new Attribute(
-            set: function($value){
-                return strtolower($value);
-            }
-        );
-    }
 }

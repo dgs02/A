@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('pokemons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('type', ['Grass', 'Fire', 'Water', 'Electric', 'Psychic']);
-            $table->enum('subtype', ['Flying', 'Poison', 'Dragon', 'Steel', 'Ice']);
-            $table->enum('region', ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova']);
+            $table->enum('type', ['Grass', 'Fire', 'Water', 'Electric', 'Psychic'])->nullable();
+            $table->enum('subtype', ['Flying', 'Poison', 'Dragon', 'Steel', 'Ice'])->nullable();
+            $table->enum('region', ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'])->nullable();
             $table->timestamps();
         });
     }
