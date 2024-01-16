@@ -12,9 +12,9 @@
     <h1>Notas desde base de datos</h1>
 
 
-    @if (session('success'))
+    @if (session('mensaje'))
         <div class="alert alert-success">
-            {{ session('success') }}
+            {{ session('mensaje') }}
         </div>
     @endif
 
@@ -23,15 +23,20 @@
             {{ session('error') }}
         </div>
     @endif
+
     <a href="{{ route('crear') }}" class="btn btn-primary">Crear nuevo Pokémon</a>
 
+
+    </a>
     <table border="1">
+
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>tipo</th>
                 <th>subtipo</th>
                 <th>region</th>
+                <th>Acciones</th>
 
             </tr>
         </thead>
@@ -41,8 +46,12 @@
                 <td>{{ $pokemon->type }}</td>
                 <td>{{ $pokemon->subtype }}</td>
                 <td>{{ $pokemon->region }}</td>
+                <td>
+                    <a href="{{ route('pokemons.editar', ['id' => $pokemon->id]) }}">Editar</a>
+                </td>
             </tr>
         @endforeach
+
     </table>
 </body>
 

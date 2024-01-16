@@ -21,6 +21,12 @@ Route::get('/', function () {
 
 
 Route::get('listar', [ pokemonsController::class, 'pokemons' ])->name('listar');
+
 Route::get('crear', [pokemonsController::class, 'mostrarCrear'])->name('crear');
 Route::post('guardar-pokemon', [pokemonsController::class, 'guardarPokemon'])->name('guardar.pokemon');
+
+// Nueva ruta para mostrar el formulario de edición
+Route::get('editar/{id}', [pokemonsController::class, 'mostrarEditar'])->name('pokemons.editar');
+// Ruta para actualizar el Pokémon
+Route::put('editar/{id}', [pokemonsController::class, 'actualizar'])->name('pokemons.actualizar');
 
