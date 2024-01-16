@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\pokemonsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,7 @@ Route::put('editar/{id}', [pokemonsController::class, 'actualizar'])->name('poke
 
 // Nueva ruta para el borrado
 Route::delete('borrar/{id}', [pokemonsController::class, 'borrar'])->name('pokemons.borrar');
+
+
+Route::get('register', [UserController::class, 'mostrarRegister'])->name('register');
+Route::post('guardar-user', [UserController::class, 'guardarUser'])->name('guardar.user');
