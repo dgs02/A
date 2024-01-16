@@ -66,5 +66,20 @@ class pokemonsController extends Controller
 
         return redirect()->route('listar')->with('mensaje', 'Pokémon actualizado correctamente');
     }
+
+
+    // Método para borrar un Pokémon
+    public function borrar($id)
+    {
+        $pokemon = pokemons::find($id);
+
+        if (!$pokemon) {
+            return redirect()->route('listar')->with('error', 'Pokémon no encontrado');
+        }
+
+        $pokemon->delete();
+
+        return redirect()->route('listar')->with('mensaje', 'Pokémon eliminado correctamente');
+    }
 }
 

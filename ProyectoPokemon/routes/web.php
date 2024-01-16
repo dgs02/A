@@ -30,3 +30,5 @@ Route::get('editar/{id}', [pokemonsController::class, 'mostrarEditar'])->name('p
 // Ruta para actualizar el Pokémon
 Route::put('editar/{id}', [pokemonsController::class, 'actualizar'])->name('pokemons.actualizar');
 
+// Nueva ruta para el borrado
+Route::delete('borrar/{id}', [pokemonsController::class, 'borrar'])->name('pokemons.borrar');
