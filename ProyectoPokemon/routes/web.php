@@ -21,6 +21,10 @@ Route::get('/', function () {
 
 
 
+Route::get('/home', function () {
+    return view('auth.dashboard');
+})->middleware('auth');
+
 Route::get('listar', [ pokemonsController::class, 'pokemons' ])->name('listar');
 
 Route::get('crear', [pokemonsController::class, 'mostrarCrear'])->name('crear');
@@ -35,5 +39,3 @@ Route::put('editar/{id}', [pokemonsController::class, 'actualizar'])->name('poke
 Route::delete('borrar/{id}', [pokemonsController::class, 'borrar'])->name('pokemons.borrar');
 
 
-Route::get('register', [UserController::class, 'mostrarRegister'])->name('register');
-Route::post('guardar-user', [UserController::class, 'guardarUser'])->name('guardar.user');
