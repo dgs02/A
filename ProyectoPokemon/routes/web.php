@@ -25,6 +25,8 @@ Route::get('/home', function () {
     return view('auth.dashboard');
 })->middleware('auth');
 
+
+
 Route::get('listar', [ pokemonsController::class, 'pokemons' ])->name('listar');
 
 Route::get('crear', [pokemonsController::class, 'mostrarCrear'])->name('crear');

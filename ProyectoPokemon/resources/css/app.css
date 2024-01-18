@@ -1,0 +1,239 @@
+body {
+    background-color: #0c0c0c;
+
+    /* Fondo oscuro */
+
+}
+
+.filtro-imagen {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #e4000f;
+    text-shadow: 2px 2px 4px rgba(15, 15, 15, 0.5);
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 10px;
+    background-image: linear-gradient(to right, #7518a1, #45054d);
+    -webkit-background-clip: text;
+    color: transparent;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.1);
+
+}
+
+
+/* Estilo para el logo en el navbar */
+.navbar-brand {
+    font-family: 'Arial', sans-serif;
+    /* Cambia la fuente según tu preferencia */
+    font-size: 1.5rem;
+    /* Tamaño de la fuente */
+    font-weight: bold;
+    /* Texto en negrita */
+    color: #ffffff;
+    /* Color del texto blanco */
+    text-decoration: none;
+    /* Sin subrayado */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para un pequeño ícono al lado del texto */
+.navbar-brand::after {
+    content: "\2022";
+    /* Código Unicode para un punto de bala (puedes cambiarlo según tu preferencia) */
+    margin-left: 5px;
+    /* Espacio entre el texto y el ícono */
+    font-size: 1.5rem;
+    /* Tamaño del ícono */
+    color: #ffc107;
+    /* Color amarillo (puedes cambiarlo según tu preferencia) */
+}
+
+nav {
+    background-color: #343a40 !important;
+}
+
+.letras-nav {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.letras-nav a:hover {
+    transform: scale(1.1);
+
+}
+
+ /* Estilo general para las tarjetas */
+ .card {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    width: 90%;
+    background-color: #343a40;
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.card img {
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para el título dentro de la tarjeta */
+.card-title {
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-text {
+    margin-top: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo para el fondo oscuro sobre la imagen */
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo para la tarjeta cuando el ratón está encima */
+.card:hover img {
+    transform: translateY(-5%);
+}
+
+.card:hover .dark-overlay,
+.card:hover .card-title {
+    opacity: 1;
+}
+
+.card:hover .dark-overlay,
+.card:hover .card-text {
+    opacity: 1;
+}
+
+
+.mt-10 {
+    margin-top: 100px !important;
+}
+
+
+.custom-table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: #343a40;
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-top: 1px solid #454d55;
+}
+
+.custom-table thead {
+    background-color: #212529;
+    border-bottom: 2px solid #454d55;
+}
+
+.custom-table th {
+    font-weight: bold;
+    border-top: none;
+}
+
+.custom-table tbody tr:nth-of-type(odd) {
+    background-color: #454d55;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #5a6268;
+}
+
+.custom-table .btn {
+    border-radius: 5px;
+}
+
+
+/* Estilo para el título vistoso */
+    .vistoso-title {
+        font-family: 'Arial', sans-serif; /* Cambia la fuente según tu preferencia */
+        font-size: 3rem; /* Tamaño de la fuente */
+        font-weight: bold; /* Texto en negrita */
+        color: #ffc107; /* Color amarillo (puedes cambiarlo según tu preferencia) */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra 3D con efecto */
+        animation: bounce 1s infinite alternate; /* Animación de rebote */
+    }
+
+    /* Definir la animación de rebote */
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-10px);
+        }
+    }
+
+
+/* Estilo personalizado para el footer */
+footer {
+    background-color: #1d1d1d;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilo para los enlaces en el footer */
+footer a {
+    color: #ffc107;
+    /* Color amarillo */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Cambia el color de los enlaces al pasar el ratón sobre ellos */
+footer a:hover {
+    color: #ffffff;
+}

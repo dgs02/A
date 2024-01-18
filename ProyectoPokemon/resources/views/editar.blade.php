@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('auth.template')
 
-<head>
-    <!-- Encabezado de la página -->
-</head>
-
-<body>
-
-    <h1>Editar Pokémon</h1>
+@section('content')
+<div class="container mt-5 col-md-6 text-white">
+    <h2 class="vistoso-title">Editar Pokémon</h2>
 
     @if (session('error'))
         <div class="alert alert-danger">
@@ -19,24 +14,43 @@
         @csrf
         @method('put')
 
-        <!-- Campos del formulario para editar -->
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" value="{{ $pokemon->name }}" required>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre:</label>
+            <input type="text" name="name" value="{{ $pokemon->name }}" class="form-control" required>
+        </div>
 
-        <label for="type">Tipo:</label>
-        <input type="text" name="type" value="{{ $pokemon->type }}" required>
+        <div class="mb-3">
+            <label for="type" class="form-label">Tipo:</label>
+            <select name="type" class="form-select" required>
+                @foreach(['Grass', 'Fire', 'Water', 'Electric', 'Psychic'] as $type)
+                    <option value="{{ $type }}" {{ $type === $pokemon->type ? 'selected' : '' }}>{{ $type }}</option>
+                @endforeach
+            </select>
+        </div>
 
-        <label for="subtype">Subtipo:</label>
-        <input type="text" name="subtype" value="{{ $pokemon->subtype }}" required>
+        <div class="mb-3">
+            <label for="subtype" class="form-label">Subtipo:</label>
+            <select name="subtype" class="form-select" required>
+                @foreach(['Flying', 'Poison', 'Dragon', 'Steel', 'Ice'] as $subtype)
+                    <option value="{{ $subtype }}" {{ $subtype === $pokemon->subtype ? 'selected' : '' }}>{{ $subtype }}</option>
+                @endforeach
+            </select>
+        </div>
 
-        <label for="region">Region:</label>
-        <input type="text" name="region" value="{{ $pokemon->region }}" required>
+        <div class="mb-3">
+            <label for="region" class="form-label">Región:</label>
+            <select name="region" class="form-select" required>
+                @foreach(['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'] as $region)
+                    <option value="{{ $region }}" {{ $region === $pokemon->region ? 'selected' : '' }}>{{ $region }}</option>
+                @endforeach
+            </select>
+        </div>
 
-        <!-- Agrega campos similares para type, subtype y region -->
+        <!-- Agregar campos similares para type, subtype y region -->
 
-        <button type="submit">Actualizar Pokémon</button>
+        <button type="submit" class="btn btn-primary">Actualizar Pokémon</button>
     </form>
+</div>
 
-</body>
 
-</html>
+@endsection
