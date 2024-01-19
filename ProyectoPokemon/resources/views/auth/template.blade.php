@@ -78,12 +78,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>&copy; {{ date('Y') }} Tu Empresa</p>
-                    <p>Desarrollado con <i class="bi bi-heart-fill text-danger"></i> por <a href="#" target="_blank">Tu Nombre</a></p>
+                    <p>&copy; <span id="anio-footer">{{ date('Y') }}</span> Proyecto Pokemon</p>
+                    <p>Desarrollado <i class="bi bi-heart-fill text-danger"></i> por <a href="#" target="_blank">@dgs____</a></p>
                 </div>
             </div>
         </div>
     </footer>
+    </html>
+
 
 </body>
 

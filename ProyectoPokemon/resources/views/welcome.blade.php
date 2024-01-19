@@ -65,6 +65,8 @@ En nuestra plataforma, encontrarás una experiencia única para explorar a fondo
             </div>
           </div>
 
+
+
           <!-- Columna de la derecha con la imagen -->
           <div class="col-md-6 d-flex align-items-center justify-content-center">
             <img src="{{ asset('img/personaje.png') }}" class="img-fluid" alt="Imagen Vertical">
@@ -76,6 +78,9 @@ En nuestra plataforma, encontrarás una experiencia única para explorar a fondo
 
     <!-- Sección de Cards -->
     <section class="container mt-5">
+        <div class="container mt-5 text-center">
+            <button id="cambiarContenidoBtn" class="btn btn-primary">Mas información</button>
+        </div>
 
 
         <div class="container mt-5">
@@ -162,6 +167,8 @@ En nuestra plataforma, encontrarás una experiencia única para explorar a fondo
 
             </div>
           </div>
+
+
     </section>
 </body>
 
@@ -169,10 +176,11 @@ En nuestra plataforma, encontrarás una experiencia única para explorar a fondo
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>&copy; {{ date('Y') }} Tu Empresa</p>
-                <p>Desarrollado con <i class="bi bi-heart-fill text-danger"></i> por <a href="#" target="_blank">Tu Nombre</a></p>
+                <p>&copy; <span id="anio-footer">{{ date('Y') }}</span> Proyecto Pokemon</p>
+                <p>Desarrollado <i class="bi bi-heart-fill text-danger"></i> por <a href="#" target="_blank">@dgs____</a></p>
             </div>
         </div>
     </div>
 </footer>
 </html>
+
