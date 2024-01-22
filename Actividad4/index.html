@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Empresa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=inicializarMapa" async defer></script>
+  <script src="app.js" defer></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header>
+    <div class="container">
+      <img src="img\logo.png" width="50" height="50" alt="Logo de la empresa">
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-shopping-basket"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- INFORMACIÓN DE LA EMPRESA -->
+  <section id="informacion">
+    <div class="container">
+      <h2>Historia de la Empresa</h2>
+      <p>Hace una década, en el apogeo de la revolución tecnológica, David, apasionado por la innovación, fundó nuestra empresa. Inspirado por la visión de un futuro digital, empezó en su garaje, rodeado de cables y sueños audaces. Su dedicación y habilidades excepcionales atrajeron a un equipo de mentes creativas. Juntos, superaron desafíos y transformaron la visión de David en realidad. Hoy, nuestra empresa tecnológica es líder en soluciones innovadoras. David sigue siendo el corazón de la empresa, guiándonos con su visión y liderazgo. La historia de éxito refleja no solo avances tecnológicos, sino también la determinación y pasión de nuestro fundador.</p>
+  
+      <!--ACORDEON-->
+      <div class="accordion">
+        <h3>Servicios</h3>
+        <div>
+          <p>Nuestros servicios se basan en la produccion y modificación de paguinas web así como aplicaciones Web y el mantenimiento de las mismas.</p>
+        </div>
+  
+        <h3>Precios</h3>
+        <div>
+          <p>Nuestros precio se adaptan alas necesidades de nustros clientes y tenemos un abanico muy bariado de precios.</p>
+        </div>
+  
+        <h3>Devoluciones</h3>
+        <div>
+          <p>Si un cliente no queda satisfecho con nuestro servicio se le hara un rembolso del importe completo.</p>
+        </div>
+      </div>
+  
+      <div class="office-image" id="office-image">
+        <img src="img/BANNER.jpg" alt="Oficina de la empresa">
+        
+      </div>
+  
+      <!-- Más imágenes y texto sobre oficinas / fábricas / almacenes -->
+  
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
+        <p>Dirección: Avenida de las ciencias, Sevilla Este</p>
+        <p>Email: gdavid1004@gmail.com</p>
+        <p>Teléfono: +34 644958756</p>
+        
+        <!-- Mapa de Google Maps -->
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="1000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=sevilla+este&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section id="formulario">
+    <div class="container mt-5">
+        <h2>Formulario de Contacto</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="nombre">Nombre *</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" class="form-control" id="apellidos" name="apellidos">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <input type="text" class="form-control" id="asunto" name="asunto">
+          </div>
+          <div class="form-group">
+            <label for="comentario">Comentario *</label>
+            <textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="politica" name="politica" required>
+            <label class="form-check-label" for="politica">He leído y acepto la política de privacidad *</label>
+          </div>
+          <div class="form-group">
+            <label for="captcha">Captcha: Suma dos números (ej. 1 + 2) *</label>
+            <input type="text" class="form-control" id="captcha" name="captcha" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container">
+      <div class="footer-block">
+        <h3>Enlaces útiles</h3>
+        <ul>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Más bloques de enlaces -->
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/xxxxxxxxxx.js"></script> <!-- Reemplaza con tu clave de FontAwesome -->
+  
+</body>
+</html>
